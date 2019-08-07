@@ -1,0 +1,342 @@
+/* reset */
+*{
+	margin: 0; padding: 0; box-sizing: border-box; font-family: "맑은 고딕"; text-decoration: none;
+}
+
+html{
+	/* 아랍권 처럼 우에서 좌측으로 읽어들일 때 사용하는 속성 */
+	/* 마크업에서는 <html dir="rtl"> */
+	/* direction: rtl; */
+}
+
+/* @media type종류 (조건식){
+	all 
+	screen
+	print
+} */
+
+/* body{
+	background-color: #000;
+} */
+
+
+/* @media (min-width:361px){
+	body{
+		background-color: yellowgreen;
+	}
+}
+@media (min-width:721px){
+	body{
+		background-color: pink;
+	}
+}
+@media (min-width:1101px){
+	body{
+		background-color: white;
+	}
+} */
+
+
+
+/* @media (max-width:1099px) and (max-height:968px){
+	body{
+		background-color: blue;
+	}
+}
+@media (max-width:719px){
+	body{
+		background-color: green;
+	}
+}
+@media (max-width:359px){
+	body{
+		background-color: purple;
+	}
+}
+@media print{
+	body{
+		background-color: green;
+	}
+} */
+
+/* 
+.test1{
+	height: 100px;
+	font-size: 30px;
+	text-align: center;
+	line-height: 100px;
+}
+.test2{
+	height: 100px;
+	font-size: 30px;
+	text-align: center;
+	line-height: 100px;
+}
+
+@media (max-width:1023px){
+	.test1{
+		height: 50px;
+		font-size: 20px;
+		line-height: 50px;
+	}
+	.test2{
+		height: 5.208333333333333vw;
+		font-size: 1.5625vw;
+		line-height: 5.208333333333333vw;
+	}
+} */
+
+body{
+	background-color: #e6f4f8;
+}
+
+/* header */
+.header{
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+	height: 145px;
+}
+@media(max-width:720px){
+	.header{
+		width: 100%;
+	}
+}
+.header h1{
+	display: inline-block;
+	position: absolute;
+	left: 10px;
+	top: 63px;
+	width: 94px;
+	height: 29px;
+}
+@media(max-width:720px){
+	.header h1{
+		width: 100%;
+		text-align: center;
+		position: static;
+		margin-bottom: 18px;
+		padding-top: 45px;
+	}
+}
+.header h1 a{
+	display: inline-block;
+}
+.header h1 img{
+	width: 100%;
+	height: auto;
+	/* 
+		width:100%;
+		max-height:100%;
+		max-width:100%;
+	*/
+}
+.nav{
+	position: absolute;
+	top: 75px;
+	right: 0;
+	color: #333;
+	font-size: 16px;
+	font-weight: 700;
+	font-family: "맑은 고딕";
+}
+@media(max-width:720px){
+	.nav{
+		position: static;
+		top: 0;
+		right: auto;
+		left: 0;
+		width: 100%;
+		text-align: center;
+	}
+}
+.nav a{
+	display: inline-block;
+	margin: 0 10px;
+	float: left;
+	color: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	font-family: inherit;
+}
+@media(max-width:720px){
+	.nav a{
+		float: none;
+	}
+}
+
+
+/* footer */
+.footer{
+	position: relative;
+	width: 960px;
+	margin: 0 auto;
+	height: 100px;
+}
+@media(max-width:720px){
+	.footer{
+		width: 100%;
+		height: 125px;
+		padding: 30px 0;
+		text-align: center;
+	}
+}
+.sns{
+	position: absolute;
+	top: 30px;
+	right: 0;
+}
+@media(max-width:720px){
+	.sns{
+		position: static;
+	}
+}
+.sns a{
+	display: inline-block;
+	margin: 0 10px;
+}
+.info{
+	padding: 60px 10px 0;
+	text-align: center;
+}
+.copy{
+	float: left;
+	color: #669999;
+	font-size: 14px;
+}
+.by{
+	float: right;
+	color: #669999;
+	font-size: 14px;
+}
+.by strong{
+	font-weight: 700;
+	color: inherit;
+	font-size: inherit;
+}
+@media(max-width:720px){
+	.info{
+		padding: 0;
+	}
+	.copy{
+		float: none;
+		display: block;
+		margin: 10px 0 5px;
+	}
+	.by{
+		float: none;
+		display: block;
+	}
+}
+
+
+/* main */
+.main{
+	width: 960px;
+	margin: 0 auto;
+}
+.portfolio{
+	width: 100%;
+	height: 25.625vw;
+	background: url('../image/gallery2.jpg') no-repeat 50% 50%;
+	background-size: 100% 100%;
+}
+.html::after, .tool::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.html5{
+	float: left;
+	/* width: calc(100% / 2); */
+	/* width: calc((100% - 12px) / 2); */
+	width: calc(99% / 2);
+	height: 15.885416666666666vw;
+	background-color: #cc9999;
+}
+.css3{
+	float: right;
+	width: calc(100% / 2);
+	height: 15.885416666666666vw;
+	background-color: #333;
+}
+.tool{
+}
+.html{
+	margin: 1% 0;
+}
+.tool section{
+	width: calc(97% / 4);
+	margin-left: 1%;
+	float: left;
+	height: 11.979166666666666vw;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+}
+.tool .less{
+	margin-left: 0;
+}
+.less{
+	background-image: url(../image/less.jpg);
+}
+.js{
+	background-image: url(../image/js.jpg);
+}
+.svn{
+	background-image: url(../image/svn.jpg);
+}
+.git{
+	background-image: url(../image/git.jpg);
+}
+
+@media(max-width:720px){
+	.main{
+		width: 100%;
+	}
+}
+
+
+/* 집에 가고싶어!! 집에!! 이마트도 들려야지!! 으어 두시간이 딱 적당한거같은데ㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔ*/
+
+/* 레진코믹스의 기술 가이드 문서가 좋다. 거기 실력자들 다 모여있다고 한다. */
+
+/* media Query */
+/* @media(){
+	.header{
+		width: 100%;
+	}
+	.header h1{
+		display: inline-block;
+		position: absolute;
+		left: 10px;
+		top: 63px;
+		width: 94px;
+		height: 29px;
+	}
+	.header h1 a{
+		display: inline-block;
+	}
+	.header h1 img{
+		width: 100%;
+		height: auto;
+	}
+	.nav{
+		position: absolute;
+		top: 75px;
+		right: 0;
+		color: #333;
+		font-size: 16px;
+		font-weight: 700;
+		font-family: "맑은 고딕";
+	}
+	.nav a{
+		display: inline-block;
+		margin: 0 10px;
+		float: left;
+		color: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		font-family: inherit;
+	}
+} */

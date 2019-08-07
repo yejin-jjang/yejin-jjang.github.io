@@ -1,0 +1,387 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	font-family: '맑은 고딕';
+	text-decoration: none;
+	font-weight: inherit;
+}
+header,nav,main,footer,section{
+	display: block;
+}
+
+
+body{
+	background-color: #e6f4f8;
+}
+
+/* header */
+.header{
+	width: 960px;
+	height: 145px;
+	margin: 0 auto;
+	position: relative;
+}
+.header .logo{
+	position: absolute;
+	top: 63px;
+	left: 10px;
+	width: 97px;
+	height: 32px;
+}
+.header .logo img{
+	width: 100%;
+	height: 100%;
+}
+.header .qmenu{
+	position: absolute;
+	top: 79px;
+	right: 0;
+	display: inline-block;
+}
+.header .qmenu a{
+	display: inline-block;
+	font-size: 16pt;
+	color: #2f323a;
+	margin: 0 10px;
+	font-weight: bold;
+}
+
+/* main */
+.main{
+	position: relative;
+	margin: 0 auto;
+	width: 960px;
+	height: 1103px;
+}
+.portfolio{
+	height: 492px;
+	background-image: url('../image/img1.jpg');
+	background-size: 100%;
+	position: relative;
+	margin-bottom: 13px;
+}
+.portfolio h2{
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	display: block;
+}
+.portfolio h2 span{
+	font-size: 16pt;
+	margin-bottom: 32px;
+	display: block;
+}
+.portfolio h2 strong{
+	font-size: 50pt;
+	display: block;
+}
+.portfolio button{
+	width: 120px;
+	height: 40px;
+	font-size: 14pt;
+	color: #fff;
+	background-color: transparent;
+	border: 1px solid rgba(255, 255, 255, .5);
+	position: absolute;
+	bottom: 40px;
+	text-align: center;
+	border-radius: 40px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.html5{
+	position: relative;
+	width: calc((100% - 13px) / 2);
+	float: left;
+	height: 305px;
+	background-color: #b9a88e;
+	margin-bottom: 13px;
+}
+.html5 h2,.css3 h2{
+	position: absolute;
+	top: 50%;
+	text-align: center;
+	transform: translateY(-50%);
+	width: 100%;
+	color: #fff;
+	display: block;
+	height: 160px;
+}
+.html5 h2 strong,.css3 h2 strong{
+	font-size: 36pt;
+	display: block;
+}
+.html5 h2 span,.css3 h2 span{
+	font-size: 18pt;
+	margin: 25px 0;
+	display: block;
+}
+.html5 button,.css3 button{
+	width: 120px;
+	height: 40px;
+	font-size: 14pt;
+	color: #fff;
+	background-color: transparent;
+	border: 1px solid rgba(255, 255, 255, .5);
+	position: absolute;
+	text-align: center;
+	border-radius: 40px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.css3{
+	position: relative;
+	width: calc((100% - 13px) / 2);
+	float: right;
+	height: 305px;
+	background-color: #2d2d35;
+	margin-bottom: 13px;
+}
+.hidden{
+	color: transparent;
+	position: relative;
+	width: 1px;
+	height: 1px;
+}
+
+.less{
+	display: inline-block;
+	width: calc((100% - 39px) / 4);
+	height: 230px;
+	margin-right: 13px;
+	float: left;
+}
+.less img{
+	width: 100%;
+	height: 100%;
+}
+.js{
+	display: inline-block;
+	width: calc((100% - 39px) / 4);
+	height: 230px;
+	margin-right: 13px;
+	float: left;
+}
+.js img{
+	width: 100%;
+	height: 100%;
+}
+.svn{
+	display: inline-block;
+	width: calc((100% - 39px) / 4);
+	height: 230px;
+	margin-right: 13px;
+	float: left;
+}
+.svn img{
+	width: 100%;
+	height: 100%;
+}
+.git{
+	display: inline-block;
+	width: calc((100% - 39px) / 4);
+	height: 230px;
+	float: left;;
+}
+.git img{
+	width: 100%;
+	height: 100%;
+}
+
+
+/* footer */
+.footerwrap{
+	width: 100%;
+	background-color: #dbecf1;
+	height: 100px;
+}
+.footer{
+	width: 960px;
+	position: relative;
+	margin: 0 auto;
+}
+.footer .snsmenu{
+	position: absolute;
+	margin-right: 10px;
+	top: 30px;
+	right: 0;
+}
+.footer .snsmenu a{
+	width: 14px;
+	height: 14px;
+	margin: 0 6px;
+	padding: 5px;
+	display: inline-block;
+}
+.footer .copy{
+
+}
+.footer .copy span{
+	position: absolute;
+	top: 60px;
+	font-size: 13pt;
+	color: #708287;
+}
+.footer .copy span:last-child{
+	right: 0;
+	color: #708287;
+}
+.footer .copy span em{
+	color: #2f323a;
+}
+
+
+
+@media(max-width:795px){
+	body{
+		width: 795px;
+	}
+	/* header */
+	.header{
+		width: 795px;
+	}
+	.header .logo{
+		top: 45px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 94px;
+		height: 28px;
+	}
+	.header .qmenu{
+		top: 94px;
+		left: 50%;
+		transform: translateX(-50%);
+		right: inherit;
+	}
+	.header .qmenu a{
+		text-align: center;
+	}
+
+
+	/* main */
+	.main{
+		width: 763px;
+		height: 1592px;
+	}
+	.portfolio{
+		height: 377px;
+		background-image: url('../image/img1.jpg');
+		background-size: 100%;
+		position: relative;
+		margin-bottom: 16px;
+	}
+	.portfolio h2{
+		color: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		text-align: center;
+		display: block;
+	}
+	.portfolio h2 span{
+		margin-bottom: 25px;
+	}
+	.portfolio h2 strong{
+		font-size: 36pt;
+	}
+	.portfolio button{
+		bottom: 38px;
+	}
+
+	.html5{
+		width: calc((100% - 16px) / 2);
+		height: 375px;
+		margin-bottom: 16px;
+	}
+	.html5 h2,.css3 h2{
+		position: absolute;
+		top: 50%;
+		text-align: center;
+		transform: translateY(-50%);
+		width: 100%;
+		color: #fff;
+		display: block;
+		height: 160px;
+	}
+	.html5 h2 strong,.css3 h2 strong{
+		font-size: 28pt;
+	}
+	.html5 h2 span,.css3 h2 span{
+		margin: 25px 0;
+	}
+	.css3{
+		width: calc((100% - 16px) / 2);
+		height: 375px;
+		margin-bottom: 16px;
+	}
+	.less{
+		display: inline-block;
+		width: calc((100% - 16px) / 2);
+		height: 375px;
+		margin-right: 0px;
+		float: left;
+		margin-bottom: 16px;
+	}
+	.js{
+		display: inline-block;
+		width: calc((100% - 16px) / 2);
+		height: 375px;
+		margin-right: 0px;
+		float: right;
+		margin-bottom: 16px;
+	}
+	.svn{
+		display: inline-block;
+		width: calc((100% - 16px) / 2);
+		height: 375px;
+		margin-right: 0px;
+		float: left;
+	}
+	.git{
+		display: inline-block;
+		width: calc((100% - 16px) / 2);
+		height: 375px;
+		float: right;
+	}
+
+
+	/* footer */
+	.footerwrap{
+		width: 795px;
+		height: 126px;
+	}
+	.footer{
+		width: 100%;
+	}
+	.footer .snsmenu{
+		margin-right: 0px;
+		top: 25px;
+		right: inherit;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.footer .snsmenu a{
+		width: 15px;
+		height: 15px;
+		margin: 0 17px;
+	}
+	.footer .copy span{
+		text-align: center;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.footer .copy span:last-child{
+		right: 0;
+		color: #708287;
+		top: 82px;
+	}
+
+
+}

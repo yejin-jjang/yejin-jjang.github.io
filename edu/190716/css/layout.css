@@ -1,0 +1,304 @@
+/* tabgroup style */
+.tabgroup{
+	position: relative;
+	width: 800px;
+	margin: 50px auto;
+}
+.tabmenu{
+	position: relative;
+	margin-bottom:-1px;
+	border-bottom: 2px solid #222;
+}
+.tabmenu::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.tabmenu li{
+	display: inline-block;
+	margin-bottom:-2px;
+}
+.tabmenu a{
+	display: inline-block;
+	min-width: 100px;
+	text-align: center;
+	padding: 10px 5px;
+	background-color: #f5f5f5;
+	border: 1px solid #ddd;
+	border-bottom-color: #222;
+	border-bottom-width: 2px;
+	position: relative;
+}
+.tabcnt{
+	display: none;
+	min-height: 500px;
+	border: 1px solid #222;
+	border-top: 0;
+	padding: 20px 15px;
+}
+
+/* tabmenu 활성화 */
+.tabmenu .on{
+
+}
+.tabmenu .on a{
+	border-color: #222;
+	border-bottom-color: #fff;
+	background-color: #fff;
+	z-index: 1;
+}
+.tabcnt.on{
+	display: block;
+	/* tabcnt 와 on 클래스는 붙어있다. 띄어쓰기를 하지 않는다. */
+}
+
+
+/* tabmenu style hx type */
+.hxtabgroup{
+	position: relative;
+	width: 800px;
+	margin: 20px auto;
+	border-bottom: 1px solid #222;
+	height: 400px;
+}
+.hxtabgroup h2{
+	display: inline-block;
+}
+.hxtabgroup h2 a{
+	display: inline-block;
+	min-width: 100px;
+	height: 40px;
+	padding: 10px 5px;
+	border: 1px solid #ddd;
+	background-color: #f5f5f5;
+	text-align: center;
+	vertical-align: middle;
+}
+.hxcnt{
+	display: none;
+	position: absolute;
+	border-top: 1px solid #222;
+	padding: 20px 15px;
+	width: 100%;
+}
+.hxcnt ul{
+
+}
+.hxcnt li{
+	position: relative;
+	line-height: 25px;
+}
+.hxcnt li a{
+	display: inline-block;
+/* inline-bolck으로 하면 글자 영역만 링크영역이 되고, block로 하면 li영역 전부가 링크영역이 된다. */
+/* 여기서부터 말줄임 */
+	width: calc(100% - 100px);
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.hxcnt li span{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.hxcnt .more{
+	position: absolute;
+	top: -30px;
+	right: 0;
+	display: inline-block;
+}
+
+/* hx type 활성화 */
+.hxtabgroup h2.on{
+
+}
+.hxtabgroup h2.on a{
+	border-color: #222;
+	background-color: #222;
+	color: #fff;
+}
+.hxcnt.on{
+	display: block;
+}
+
+
+/* test */
+/* .ultabgroup{
+	top: 300px;
+	position: relative;
+	width: 800px;
+	margin: 20px auto;
+}
+.tab{
+	
+}
+
+.tab1{
+	display: none;
+	position: absolute;
+	border-top: 1px solid #222;
+	padding: 20px 15px;
+	width: 100%;
+}
+.tab1 ul{
+
+}
+.tab1 li{
+	position: relative;
+	line-height: 25px;
+}
+.tab1 li a{
+
+}
+.tab1 .more{
+	
+}
+.tabtitle{
+	display: inline-block;
+	min-width: 100px;
+	height: 40px;
+	padding: 10px 5px;
+	border: 1px solid #ddd;
+	background-color: #f5f5f5;
+	text-align: center;
+	vertical-align: middle;
+}
+.tab1 span{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.tab1.on{
+	display: block;
+}
+.tabtitle.on{
+	border-color: #222;
+	background-color: #222;
+	color: #fff;
+} */
+
+
+.ultabgroup{
+	position: relative;
+	width: 800px;
+	margin: 0 auto;
+	height: 400px;
+}
+.tab{
+
+}
+/* depth1 */
+.tab > li{
+	display: inline-block;
+}
+.tab > li > a{
+	display: inline-block;
+	min-width: 100px;
+	height: 40px;
+	position: relative;
+	padding: 10px 5px;
+	border: 1px solid #ddd;
+	background-color: #f5f5f5;
+	text-align: center;
+}
+/* depth2 */
+.tab li ul{
+	display: none;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	padding: 25px 15px;
+}
+.tab li .more{
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: none;
+	min-width: auto;
+	height: auto;
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+}
+.tab li ul li a{
+	overflow: hidden;
+	display: inline-block;
+	max-width: calc(100% - 100px);
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+ul.tab li ul li{
+	position: relative;
+	line-height: 25px;
+}
+.tab li ul li span{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* ul tabmenu 활성화 */
+.tab > li.on{
+
+}
+.tab > li.on > a{
+	border-color: #222;
+	background-color: #222;
+	color: #fff;
+}
+.tab > li.on > .more{
+	border-color: transparent;
+	background-color: transparent;
+	color: #222;
+}
+/* depth2 */
+.tab li.on ul{
+	display: block;
+}
+.tab li.on ul li a{
+	
+}
+.tab li.on ul li{
+
+}
+.tab li.on ul li span{
+
+}
+.tab li.on .more{
+	display: block;
+}
+
+/* navigation */
+.nav{
+
+}
+.gnb::after{
+	content:"";
+	display: block;
+	clear: both;
+}
+/* nav > depth1 */
+.gnb .dep1{
+	float: left;
+	/* width: 20%; */
+	width: calc(100% / 5);
+	/* 이거 배너에 사용할 수 있을 듯 */
+	background-color: skyblue;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+}
+.gnb .dep1 > a{
+
+}
+/* nav > depth2 */
+.gnb .dep2{
+	display: none;
+}
+.gnb .dep2 > li{
+
+}
+.gnb .dep2 > li > a{
+
+}
